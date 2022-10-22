@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-course-material",
+  "version": "1.0.0",
+  "description": "Support material for Node Js courses",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosemaPereira/NodeJS-Course-Material.git"
+  },
+  "keywords": [
+    "nodejs",
+    "material"
+  ],
+  "author": "Josema Pereira",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/JosemaPereira/NodeJS-Course-Material/issues"
+  },
+  "homepage": "https://github.com/JosemaPereira/NodeJS-Course-Material#readme"
+}
