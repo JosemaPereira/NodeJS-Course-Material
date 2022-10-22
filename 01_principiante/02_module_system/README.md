@@ -52,7 +52,7 @@ console.log(`La fecha actual es ${getParseDate()}`);
 
 ## :mag: Para saber más
 
-- [Exponiendo funcionalidades usando exports](https://nodejs.dev/en/learn/expose-functionality-from-a-nodejs-file-using-exports/)
+- [Exponiendo funcionalidades usando exports](https://www.freecodecamp.org/news/module-exports-how-to-export-in-node-js-and-javascript/)
 
 ## :pencil2: Ejercicio
 

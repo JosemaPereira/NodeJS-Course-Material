@@ -110,7 +110,7 @@ console.log({ bigBuff, string: bigBuff.toString() });
 
 - [Eventos](https://nodejs.org/api/events.html)
 - [El emisor de eventos de NodeJS](https://nodejs.dev/en/learn/the-nodejs-event-emitter/)
-- [Buffers](https://nodejs.dev/en/learn/nodejs-buffers/)
+- [Buffers](https://nodejs.org/api/buffer.html)
 
 ## :pencil2: Ejercicio
 

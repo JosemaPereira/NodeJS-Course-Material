@@ -75,7 +75,7 @@ server.listen(8080);
 
 [Que es una REST API](https://www.redhat.com/en/topics/api/what-is-a-rest-api)
 
-[Creando un cliente HTTP](https://nodejs.dev/en/learn/making-http-requests-with-nodejs/)
+[Creando un cliente HTTP](https://www.geeksforgeeks.org/how-to-make-http-requests-in-node-js/)
 
 ## :pencil2: Ejercicio
 
