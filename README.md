@@ -4,7 +4,7 @@ Este repositorio contiene material en español utilizado durante la impartición
 
 El contenido del material se ha divido en tres niveles:
 
-- Principiante
+- [Principiante](01_principiante/README.MD)
 - Intermedio
 - Avanzado
 
