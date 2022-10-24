@@ -5,7 +5,7 @@ Este repositorio contiene material en español utilizado durante la impartición
 El contenido del material se ha divido en tres niveles:
 
 - [Principiante](01_principiante/README.MD)
-- Intermedio
+- [Intermedio](02_intermedio/README.md)
 - Avanzado
 
 Cada uno de los módulos se compone por:
