@@ -6,10 +6,6 @@
 - Configuración e instalación de ESlint
 - Configuración e instalación de Prettier
 
-## :clipboard: Material
-
-Consultar en la presentación <-TODO->
-
 ## :books: Temas
 
 ### I. Formateadores y Linters
