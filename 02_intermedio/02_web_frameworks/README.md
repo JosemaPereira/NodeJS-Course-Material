@@ -1,4 +1,4 @@
-# :computer: Web frameworks
+# :computer: Modulo 2: Web frameworks
 
 ## :book: Objetivo
 

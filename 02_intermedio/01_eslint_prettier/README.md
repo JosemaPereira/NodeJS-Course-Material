@@ -1,4 +1,4 @@
-# :computer: ESLint & Prettier
+# :computer: Modulo 1: ESLint & Prettier
 
 ## :book: Objetivo
 
@@ -180,7 +180,7 @@ Para este momento es normal que existan discrepancias entre las reglas que prett
 Para lograr que ambas herramientas coexistan, es necesario instalar el paquete `eslint-config-prettier`
 
 ```bash
-npm install eslint-config-prettier -D
+npm install eslint eslint-config-prettier -D
 ```
 
 Una vez instalado, en el archivo `.eslintrc.json` añadiremos los siguientes cambios para que ESLint tome las configuraciones de Prettier y no genere conflictos.
@@ -190,6 +190,9 @@ Una vez instalado, en el archivo `.eslintrc.json` añadiremos los siguientes cam
    //..
    "extends": ["airbnb-base", "prettier", "plugin:prettier/recommended"],
    "plugins": ["prettier"],
+   "rules": {
+      "prettier/prettier": "error"
+   }
 }
 ```
 
