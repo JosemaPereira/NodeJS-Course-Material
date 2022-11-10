@@ -6,8 +6,8 @@ El nivel intermedio se compone de los siguientes módulos y temas
 
 1. [ESLint & Prettier](01_eslint_prettier/README.md)
 2. [Web frameworks](02_web_frameworks/README.md)
-3. Rest API with express
-4. Callback hell
+3. [Rest API with express](03_rest_api/README.md)
+4. [Callback hell](04_callback_hell/README.md)
 5. Middleware & Error handling
 6. State Management
 7. Template Engines
