@@ -1,18 +1,20 @@
 export const RootServices = {
-  get: async (req) => {
-    const { rawHeaders, url, params, query } = req;
-    return {
-      message: 'This is a GET request',
-      request: { rawHeaders, url, params, query },
-    };
+  get: (req) => {
+    return new Promise((resolve) => {
+      const { rawHeaders, url, params, query } = req;
+      resolve({
+        message: 'This is a GET request',
+        request: { rawHeaders, url, params, query },
+      })
+    })
   },
-  post: async () => {
+  post: () => {
     return { message: 'This is a POST request' };
   },
-  put: async () => {
+  put: () => {
     return { message: 'This is a PUT request' };
   },
-  delete: async () => {
+  delete: () => {
     return { message: 'This is a DELETE request' };
   },
 };
