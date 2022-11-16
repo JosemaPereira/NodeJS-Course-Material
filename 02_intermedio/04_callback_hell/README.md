@@ -1,8 +1,10 @@
-# :computer: Modulo 3:  Rest API with express
+# :computer: Modulo 4: Callback Hell
 
 ## :book: Objetivo
 
-- Conocer
+- Conocer el concepto de callback
+- Identificar los problemas del uso excesivo de callbacks
+- Estrategias para evitar el callback hell
 
 ## :books: Temas
 

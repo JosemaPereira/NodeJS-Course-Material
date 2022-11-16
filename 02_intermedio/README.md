@@ -8,7 +8,7 @@ El nivel intermedio se compone de los siguientes módulos y temas
 2. [Web frameworks](02_web_frameworks/README.md)
 3. [Rest API with express](03_rest_api/README.md)
 4. [Callback hell](04_callback_hell/README.md)
-5. Middleware & Error handling
+5. [Middleware & Error handling](05_middleware_and_error_handlng/README.MD)
 6. State Management
 7. Template Engines
 8. Database Connection (SQL & NoSQL)
