@@ -10,7 +10,7 @@ El nivel intermedio se compone de los siguientes módulos y temas
 4. [Callback hell](04_callback_hell/README.md)
 5. [Middleware & Error handling](05_middleware_and_error_handlng/README.MD)
 6. [State Management](06_state_management/README.MD)
-7. Template Engines
+7. [Template Engines](07_template_engines/README.md)
 8. Database Connection (SQL & NoSQL)
 9. Mongoose
    1. Schema & Models
