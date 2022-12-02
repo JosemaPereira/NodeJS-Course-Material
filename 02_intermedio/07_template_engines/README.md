@@ -2,6 +2,9 @@
 
 ## :book: Objetivo
 
+- Conocer el concepto de template engines
+- Crear una pagina básica usando PUG
+
 ## :books: Temas
 
 ### Templete Engines
