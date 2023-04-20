@@ -1,8 +1,8 @@
 const dateServices = require('./dates');
 const fileServices = require('./files');
-const logServices = require('./logs');
 const vehicleServices = require('./vehicles');
+const eventHandler = require('./events');
 
 module.exports = {
-  dateServices, fileServices, logServices, vehicleServices,
+  dateServices, fileServices, vehicleServices, eventHandler,
 };
