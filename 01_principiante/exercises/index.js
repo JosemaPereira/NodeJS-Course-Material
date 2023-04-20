@@ -1,11 +1,15 @@
 const { readFile, writeFile } = require('fs/promises');
-const { fileServices, logServices, vehicleServices } = require('./services');
+const {
+  fileServices, vehicleServices, eventHandler,
+} = require('./services');
 const { logsCnt, filesCnt } = require('./constants');
+
+const logListener = 'log';
 
 const index = async () => {
   try {
     await fileServices.createPath(filesCnt.path.DATA);
-    await logServices.add(logsCnt.msg.INFO, 'Inicia el proceso');
+    eventHandler.emit(logListener, logsCnt.msg.INFO, 'Inicia el proceso');
 
     const data = await readFile(filesCnt.filePath.DATA, { encoding: 'utf-8' });
     const map = vehicleServices.mapper(data);
@@ -15,10 +19,10 @@ const index = async () => {
 
     const filter = parsedData.filter((v) => v.generales.marca === 'FORD');
 
-    await logServices.add(logsCnt.msg.INFO, `Autos registrados: ${parsedData.length} - Vehículos FORD: ${filter.length}`);
-    await logServices.add(logsCnt.msg.INFO, 'Termina el proceso');
+    eventHandler.emit(logListener, logsCnt.msg.INFO, `Autos registrados: ${parsedData.length} - Vehículos FORD: ${filter.length}`);
+    eventHandler.emit(logListener, logsCnt.msg.INFO, 'Termina el proceso');
   } catch (e) {
-    logServices.add(logsCnt.msg.ERROR, e.toString());
+    eventHandler.emit(logListener, logsCnt.msg.ERROR, e.toString());
   }
 };
 
