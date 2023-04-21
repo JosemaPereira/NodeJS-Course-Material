@@ -1,29 +1,21 @@
-const { readFile, writeFile } = require('fs/promises');
-const {
-  fileServices, vehicleServices, eventHandler,
-} = require('./services');
-const { logsCnt, filesCnt } = require('./constants');
+const { createServer } = require('http');
+const url = require('url');
+const { main } = require('./app');
 
-const logListener = 'log';
+const port = 3000;
 
-const index = async () => {
-  try {
-    await fileServices.createPath(filesCnt.path.DATA);
-    eventHandler.emit(logListener, logsCnt.msg.INFO, 'Inicia el proceso');
-
-    const data = await readFile(filesCnt.filePath.DATA, { encoding: 'utf-8' });
-    const map = vehicleServices.mapper(data);
-    const parsedData = await Promise.all(map);
-
-    await writeFile(filesCnt.filePath.VEHICLES, JSON.stringify(parsedData, null, 2));
-
-    const filter = parsedData.filter((v) => v.generales.marca === 'FORD');
-
-    eventHandler.emit(logListener, logsCnt.msg.INFO, `Autos registrados: ${parsedData.length} - Vehículos FORD: ${filter.length}`);
-    eventHandler.emit(logListener, logsCnt.msg.INFO, 'Termina el proceso');
-  } catch (e) {
-    eventHandler.emit(logListener, logsCnt.msg.ERROR, e.toString());
+const requestListener = (req, res) => {
+  const reqUrl = url.parse(req.url).pathname;
+  switch (reqUrl) {
+    case '/':
+    case '/vehicles':
+      main(res);
+      break;
+    default:
+      res.writeHead(400).write('bad request');
+      res.end();
   }
 };
 
-index();
+const server = createServer(requestListener);
+server.listen(port);
