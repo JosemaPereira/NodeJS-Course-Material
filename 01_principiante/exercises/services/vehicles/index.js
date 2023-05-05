@@ -1,3 +1,9 @@
+const { readFile } = require('fs/promises');
+const _ = require('underscore');
+const eventHandler = require('../events');
+const { logsCnt, apiCnt } = require('../../constants');
+const client = require('../http');
+
 const parser = async (line) => {
   try {
     const parse = line.split(',');
@@ -36,19 +42,47 @@ const parser = async (line) => {
   }
 };
 
-const mapper = (data) => {
+const getVehiclesFromFile = async (file) => {
   try {
+    eventHandler.emit(logsCnt.listener, logsCnt.msg.INFO, 'Lee datos del archivo csv');
+    const data = await readFile(file, { encoding: 'utf-8' });
     const vehicles = [];
-    const information = data.split('\r\n');
-    information.forEach((line, index) => {
+    const lines = data.split('\r\n');
+    lines.forEach((line, index) => {
       if (index > 0) {
         vehicles.push(parser(line));
       }
     });
-    return vehicles;
+    eventHandler.emit(logsCnt.listener, logsCnt.msg.INFO, 'Parsea información');
+    const parsedData = await Promise.all(vehicles);
+    return parsedData;
   } catch (e) {
-    throw new Error(`error at mapping vehicles: ${e}`);
+    return e;
   }
 };
 
-module.exports = { mapper };
+const getVehiclesFromAPI = async () => {
+  try {
+    const carsInfo = await client.getRequest(apiCnt.carAPIUrl);
+    return carsInfo.cars;
+  } catch (e) {
+    return e;
+  }
+};
+
+const filterVehicles = async (fromFile, fromAPI) => {
+  const filtered = [];
+  eventHandler.emit(logsCnt.listener, logsCnt.msg.INFO, 'Filtra resultados de los vehículos');
+  const unique = _.uniq(fromAPI, (v) => v.car && v.car_model);
+
+  unique.forEach((v) => {
+    const subSet = fromFile.filter(
+      ({ generales }) => generales.marca === v.car && generales.subMarca === v.car_model,
+    );
+    filtered.push(...subSet);
+  });
+
+  return filtered;
+};
+
+module.exports = { getVehiclesFromFile, getVehiclesFromAPI, filterVehicles };
