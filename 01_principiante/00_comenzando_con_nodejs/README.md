@@ -1,16 +1,10 @@
-# :computer: Comenzando a trabajar con NodeJS
-
-## :book: Objetivo
-
-- Conocer el propósito de NodeJS
-- Ejecutar nuestro primer código usando NodeJS
-- Identificar el concepto de paquetes y gestores de paquetes
+# :computer: Empezando a trabajar con NodeJS
 
 ## :clipboard: Material
 
-La presentación del curso está almacenada en la siguiente [liga](https://docs.google.com/presentation/d/1TgLKdAw54CHIy4n3jbXIbLHM--xYYYd9MOC6h0HsJqU/edit?usp=sharing)
+La presentación del curso está almacenada en la siguiente [liga](https://docs.google.com/presentation/d/1zoOPwCrpwpjyu3-AIWBFuZ7dw14zSUR5GUShWpXT1jQ/edit?usp=sharing)
 
-El siguiente contenido abarca de las diapositivas 9 a la 22
+El siguiente contenido abarca de las diapositivas 7 a la 20
 
 ## :books: Temas
 

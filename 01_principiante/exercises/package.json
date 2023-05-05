@@ -1,0 +1,29 @@
+{
+  "name": "node-beginner-course",
+  "version": "1.0.0",
+  "description": "NodeJS beginner course exercise",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosemaPereira/NodeJS-Course-Material.git#main"
+  },
+  "author": "Josema Pereira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JosemaPereira/NodeJS-Course-Material/issues"
+  },
+  "homepage": "https://github.com/JosemaPereira/NodeJS-Course-Material/tree/main#readme",
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "underscore": "^1.13.6"
+  }
+}
