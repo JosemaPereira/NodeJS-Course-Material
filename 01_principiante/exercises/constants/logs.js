@@ -4,4 +4,6 @@ const msg = {
   ERROR: 'ERROR',
 };
 
-module.exports = { msg };
+const listener = 'log';
+
+module.exports = { msg, listener };
