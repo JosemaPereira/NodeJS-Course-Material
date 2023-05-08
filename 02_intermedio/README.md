@@ -12,7 +12,7 @@ El nivel intermedio se compone de los siguientes módulos y temas
 6. [State Management](06_state_management/README.MD)
 7. [Template Engines](07_template_engines/README.md)
 8. [Database Connection (SQL & NoSQL)](08_database_integration/README.md)
-9. Mongoose
+9. [Mongoose](09_mongoose/README.MD)
    1. Schema & Models
    2. Queries
 10. Log Framework
