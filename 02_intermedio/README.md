@@ -13,4 +13,4 @@ El nivel intermedio se compone de los siguientes módulos y temas
 7. [Template Engines](07_template_engines/README.md)
 8. [Database Connection (SQL & NoSQL)](08_database_integration/README.md)
 9. [Mongoose](09_mongoose/README.MD)
-10. [Unit testing (Jest, mocha)](10_testing/README.MD)
+10. [Unit testing](10_testing)
