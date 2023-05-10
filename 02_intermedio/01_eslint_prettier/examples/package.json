@@ -1,0 +1,26 @@
+{
+  "name": "eslinter-prettier",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Demonstration of the use of eslint & prettier",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint index.js",
+    "lint-fix": "eslint index.js --fix"
+  },
+  "keywords": [
+    "eslint",
+    "prettier"
+  ],
+  "author": "Josema Pereira",
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1"
+  }
+}
